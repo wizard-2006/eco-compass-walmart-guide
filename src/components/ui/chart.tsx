@@ -101,19 +101,17 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip
 
-type TooltipPayload = {
-  color?: string
-  dataKey?: string | number
-  name?: string | number
-  value?: any
-  payload?: any
-}
-
 const ChartTooltipContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
     active?: boolean
-    payload?: TooltipPayload[]
+    payload?: Array<{
+      color?: string
+      dataKey?: string | number
+      name?: string | number
+      value?: any
+      payload?: any
+    }>
     label?: string
     hideLabel?: boolean
     hideIndicator?: boolean
@@ -271,16 +269,14 @@ ChartTooltipContent.displayName = "ChartTooltip"
 
 const ChartLegend = RechartsPrimitive.Legend
 
-type LegendPayload = {
-  value?: string
-  color?: string
-  dataKey?: string | number
-}
-
 const ChartLegendContent = React.forwardRef<
   HTMLDivElement,
-  Omit<React.ComponentProps<"div">, "payload"> & {
-    payload?: LegendPayload[]
+  React.ComponentProps<"div"> & {
+    payload?: Array<{
+      value?: string
+      color?: string
+      dataKey?: string | number
+    }>
     verticalAlign?: "top" | "bottom"
     hideIcon?: boolean
     nameKey?: string
