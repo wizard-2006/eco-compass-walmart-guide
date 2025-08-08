@@ -53,10 +53,4 @@ Feel free to open issues, submit pull requests, or offer suggestions to make thi
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 > 🌟 **Empowering sustainable shopping at Walmart, one click at a time!** 🌟
